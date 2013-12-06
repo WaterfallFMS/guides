@@ -32,6 +32,8 @@ Thank you, [contributors](https://github.com/WaterfallFMS/guides/graphs/contribu
 
 Guides is maintained by [waterfall software, inc](http://www.waterfallsoftware.com/).
 
+It is based off a project of the same name from Thoughtbot.
+
 License
 -------
 
