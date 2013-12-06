@@ -62,11 +62,12 @@ variables.
 Delete extra lines in `.env`, leaving only those needed for app to function
 properly. For example: `BRAINTREE_MERCHANT_ID` and `S3_SECRET`.
 
-Use [Foreman](https://github.com/ddollar/foreman) to run the app locally.
+Use [Powder](https://github.com/Rodreegez/powder) to run the app locally.
 
-    foreman start
+    powder link
+    powder open
 
-It uses your `.env` file and `Procfile` to run processes just like Heroku's
+It uses [Pow](http://pow.cx/), [Foreman](https://github.com/ddollar/foreman), your `.env` file and `Procfile` to run processes just like Heroku's
 [Cedar](https://devcenter.heroku.com/articles/cedar/) stack.
 
 Maintain a Rails app
@@ -90,19 +91,20 @@ Create a local feature branch based off master.
     git pull
     git checkout -b <branch-name>
 
-Prefix the branch name with your initials.
+Prefix the branch name with your initials.  The rest of the name should be 
+related to what is being done: 'jk-upgrading-rails-4-2'
 
-Rebase frequently to incorporate upstream changes.
+Merge frequently to incorporate upstream changes.
 
     git fetch origin
-    git rebase origin/master
+    git merge origin/master
 
 Resolve conflicts. When feature is complete and tests pass, stage the changes.
 
     rake
     git add --all
 
-When you've staged the changes, commit them.
+When you've staged the changes, commit them.  Use git has a journal.  Commit early and often.
 
     git status
     git commit --verbose
@@ -152,24 +154,13 @@ When satisfied, they comment on the pull request `Ready to merge.`
 Merge
 -----
 
-Rebase interactively. Squash commits like "Fix whitespace" into one or a
-small number of valuable commit(s). Edit commit messages to reveal intent.
+Use Github to merge the pull request.
 
-    git fetch origin
-    git rebase -i origin/master
-    rake
+Use Github to delete the feature branch after merging.
 
-View a list of new commits. View changed files. Merge branch into master.
+Prune non-existant remote branches
 
-    git log origin/master..<branch-name>
-    git diff --stat origin/master
-    git checkout master
-    git merge <branch-name> --ff-only
-    git push
-
-Delete your remote feature branch.
-
-    git push origin --delete <branch-name>
+    git fetch -p
 
 Delete your local feature branch.
 
@@ -181,17 +172,9 @@ Deploy
 View a list of new commits. View changed files. Deploy to
 [Heroku](https://devcenter.heroku.com/articles/quickstart) staging.
 
-    git fetch staging
-    git log staging/master..master
-    git diff --stat staging/master
-    git push staging
+    <TBD>
 
-If necessary, run migrations and restart the dynos.
-
-    heroku run rake db:migrate --remote staging
-    heroku restart --remote staging
-
-[Introspect] to make sure everything's ok.
+[Introspect](http://blog.heroku.com/archives/2011/6/24/the_new_heroku_3_visibility_introspection/) to make sure everything's ok.
 
     watch heroku ps --remote staging
 
@@ -199,19 +182,10 @@ Test the feature in browser.
 
 Deploy to production.
 
-    git fetch production
-    git log production/master..master
-    git diff --stat production/master
-    git push production
-    heroku run rake db:migrate --remote production
-    heroku restart --remote production
-    watch heroku ps --remote production
+    <TBD>
 
 Watch logs and metrics dashboards.
 
-Close pull request and comment `Merged.`
-
-[Introspect]: http://blog.heroku.com/archives/2011/6/24/the_new_heroku_3_visibility_introspection/
 
 Set Up Production Environment
 -----------------------------

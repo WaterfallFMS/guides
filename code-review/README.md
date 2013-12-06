@@ -64,9 +64,7 @@ Style comments
 Reviewers should comment on missed [style](../style)
 guidelines. Example comment:
 
-    [Style](../style):
-
-    > Order resourceful routes alphabetically by name.
+    [Style] Order resourceful routes alphabetically by name.
 
 An example response to style comments:
 

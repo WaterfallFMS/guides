@@ -48,12 +48,14 @@ Ruby Gems
 * Use [Appraisal] to test the gem against multiple versions of gem dependencies
   (such as Rails in a Rails engine).
 * Use [Bundler] to manage the gem's dependencies.
-* Use [Travis CI] for Continuous Integration, indicators showing whether GitHub
+* Use [Travis CI] for Continuous Integration of public repos, indicators showing whether GitHub
   pull requests can be merged, and to test against multiple Ruby versions.
+* Use [Tddium] for Continuous Integratino of private repos
 
 [Appraisal]: https://github.com/thoughtbot/appraisal
 [Bundler]: http://bundler.io
 [Travis CI]: http://travis-ci.org
+[Tddium]: https://www.tddium.com/
 
 Rails
 -----
@@ -89,12 +91,14 @@ Testing
 -------
 
 * Avoid `any_instance` in rspec-mocks and mocha. Prefer [dependency injection].
-* Avoid `its`, `let`, `let!`, `specify`, `before`, and `subject` in RSpec.
+* Avoid `its`, `specify`, `before`, and `subject` in RSpec.
 * Avoid using instance variables in tests.
 * Disable real HTTP requests to external services with
   `WebMock.disable_net_connect!`.
 * Don't test private methods.
 * Test background jobs with a [`Delayed::Job` matcher].
+* Use `let` for setting optionally needed variables across tests
+* Use `let!` for variables needed immediately
 * Use [stubs and spies] (not mocks) in isolated tests.
 * Use a single level of abstraction within scenarios.
 * Use an `it` example or test method for each execution path through the method.
@@ -169,6 +173,7 @@ HTML
 
 * Don't use a reset button for forms.
 * Prefer cancel links to cancel buttons.
+* Prefer HAML
 
 CSS
 ---
@@ -185,7 +190,7 @@ Browsers
 --------
 
 * Don't support clients without Javascript.
-* Don't support IE6 or IE7.
+* Don't support IE6 or IE7 or IE8.
 
 Objective-C
 -----------

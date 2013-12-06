@@ -25,11 +25,11 @@ A note on the language:
 Credits
 -------
 
-Thank you, [contributors](https://github.com/thoughtbot/guides/graphs/contributors)!
+Thank you, [contributors](https://github.com/WaterfallFMS/guides/graphs/contributors)!
 
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+![Waterfall Software](http://www.waterfallsoftware.com/sites/default/files/waterfall-logo.png)
 
-Guides is maintained by [thoughtbot, inc](http://thoughtbot.com/community).
+Guides is maintained by [waterfall software, inc](http://www.waterfallsoftware.com/).
 
 License
 -------

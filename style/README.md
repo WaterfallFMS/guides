@@ -6,19 +6,14 @@ A guide for programming in style.
 Git
 ---
 
-* Avoid merge commits by using a [rebase workflow].
 * Prefix feature branch names with your initials.
-* Squash multiple trivial commits into a single commit.
-* Write a [good commit message].
-
-[rebase workflow]: https://github.com/thoughtbot/guides/tree/master/protocol#merge
-[good commit message]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+* Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 Formatting
 ----------
 
 * Avoid inline comments.
-* Break long lines after 80 characters.
+* Break long lines after 120 characters.
 * Delete trailing whitespace.
 * Don't include spaces after `(`, `[` or before `]`, `)`.
 * Don't misspell.
@@ -99,9 +94,7 @@ Sass
 * Avoid nesting within a media query.
 
 ### Organization
-* Use Bourbon for a Sass Library.
-* Use Neat for a grid framework.
-* Use Bitters / Base folder for style on HTML tags, global variables, global extends and global mixins.
+* Use Foundation for a Sass Library.
 * Use Normalize as a browser reset.
 * Use HTML structure for ordering of selectors. Don't just put styles at the bottom of the Sass file.
 * Prefer the same file structure that is found in app/views.
@@ -148,6 +141,11 @@ Ruby
 * Use `def` with parentheses when there are arguments.
 * Use `each`, not `for`, for iteration.
 * Use heredocs for multi-line strings.
+
+HAML
+----
+
+* Prefer HAML over ERB
 
 ERb
 ---
