@@ -8,6 +8,8 @@ Guides for getting things done, programming well, and programming in style.
 * [Best Practices](/best-practices)
 * [Style](/style)
 * [Open Source](/open-source)
+* [Support](/support)
+* [Feature Definitions](/feature-definitions)
 
 High level guidelines:
 
